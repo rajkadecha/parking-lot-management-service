@@ -25,7 +25,7 @@ export const createParkingLot = async (req, res, next) => {
   }
 };
 
-export const getAllParkingLot = async (req, res) => {
+export const getAllParkingLot = async (req, res, next) => {
   try {
     const parkingLots = await ParkingLot.find();
     console.log(parkingLots);

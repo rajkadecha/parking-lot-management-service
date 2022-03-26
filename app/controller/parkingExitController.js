@@ -15,7 +15,7 @@ import AppError from '../utils/appError';
  * step 7: increment parking space count with 1 as vehicle exit
  * step 8: update both collection with new value
  */
-export const parkingExit = async (req, res) => {
+export const parkingExit = async (req, res, next) => {
   try {
     // step 1: enter vehicle number
     const { vehicleNumber, parkingLotId } = req.body;

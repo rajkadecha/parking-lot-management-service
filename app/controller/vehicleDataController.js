@@ -9,7 +9,7 @@ import AppError from '../utils/appError';
  * step 3: Model out data in required info
  */
 
-export const vehicleData = async (req, res) => {
+export const vehicleData = async (req, res, next) => {
   try {
     const vehicleNumber = toUpper(req.params.vehiclenumber);
     const parkingVehicleDetail = await ParkingDetail.find({ vehicleNumber }).populate({
