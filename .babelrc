@@ -1,0 +1,4 @@
+{
+  "presets": [["env", {"exclude": ["transform-es2015-classes"]}]],
+  "plugins": [["babel-plugin-transform-runtime"], ["transform-object-rest-spread"]]
+}

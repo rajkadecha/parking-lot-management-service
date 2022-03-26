@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "42988ece-3030-4c7c-9579-29c13c423838",
+		"name": "parking-lot-management-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create parking lot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Parking 2\",\r\n    \"area\": \"Gurgaon\",\r\n    \"hatchbackRate\": 50,\r\n    \"twoWheelerRate\": 30,\r\n    \"suvRate\": 100,\r\n    \"hatchbackCapacity\": 3,\r\n    \"twoWheelerCapacity\": 5,\r\n    \"suvCapacity\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/api/v1/parking-lot/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"v1",
+						"parking-lot",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all parkinglot",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/api/v1/parking-lot/get-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"v1",
+						"parking-lot",
+						"get-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "parking entry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"vehicleNumber\": \"mh01az0001\",\r\n   \"vehicleType\": \"suv\",\r\n   \"parkingLotId\": [\"623f2c89c6d672b4238a9c36\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/api/v1/parking/entry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"v1",
+						"parking",
+						"entry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "parking exit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vehicleNumber\": \"mh01az0001\",\r\n    \"parkingLotId\": [\"623f299d67e3f5eca59c2e13\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/api/v1/parking/exit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"v1",
+						"parking",
+						"exit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehicle history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3030/api/v1/parking//vehicle-data/mh01az0001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"v1",
+						"parking",
+						"",
+						"vehicle-data",
+						"mh01az0001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
